@@ -1,0 +1,30 @@
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-pulse {
+  background: linear-gradient(
+    90deg,
+    rgba(165, 165, 165, 1) 25%,
+    rgba(227, 227, 227, 1) 50%,
+    rgba(165, 165, 165, 1) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+.bg-gradient-to-r {
+  background-color: rgba(165, 165, 165, 1);
+  background-image: linear-gradient(
+    to right,
+    rgba(165, 165, 165, 0) 0%,
+    rgba(165, 165, 165, 0.1) 20%,
+    rgba(165, 165, 165, 0.2) 60%,
+    rgba(165, 165, 165, 0) 100%
+  );
+}
