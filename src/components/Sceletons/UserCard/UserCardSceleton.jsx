@@ -1,5 +1,4 @@
 import React from "react";
-import "./UserCard.css"; // Use the same custom shimmer effect CSS
 
 export const UserCardSceleton = () => {
   return (

@@ -1,9 +1,9 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Layout } from "../layouts/Layout";
-import { Homepage, Team, Blog, Commerce } from "../pages";
+import { Homepage, Users } from "../pages";
 import { Login } from "../pages/auth/Login";
 import { PrivateRoute } from "./PrivateRoute";
-import NotFoundPage from "../pages/PageNotFound";
+import NotFoundPage from "../pages/Notfound/PageNotFound";
 
 export default function Router() {
   let token = localStorage.getItem("token");
@@ -19,26 +19,10 @@ export default function Router() {
           }
         />
         <Route
-          path="/team"
+          path="/users"
           element={
             <PrivateRoute>
-              <Team />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/blog"
-          element={
-            <PrivateRoute>
-              <Blog />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/commerce"
-          element={
-            <PrivateRoute>
-              <Commerce />
+              <Users />
             </PrivateRoute>
           }
         />

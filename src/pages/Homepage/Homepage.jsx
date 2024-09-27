@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { getTodos, deleteTodo, addTodo, editTodo } from "../services/Todo";
+import { getTodos, deleteTodo, addTodo, editTodo } from "../../services/Todo";
+import { TodoSceleton } from "../../components/Sceletons/Todo/Todo";
 
 import "./HomePage.css";
 
@@ -120,62 +121,11 @@ export const Homepage = () => {
                 <tbody>
                   {todos.length === 0 ? (
                     <>
-                      <tr>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-text"></span>
-                        </td>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-input"></span>
-                        </td>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-text"></span>
-                        </td>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-button"></span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-text"></span>
-                        </td>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-input"></span>
-                        </td>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-text"></span>
-                        </td>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-button"></span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-text"></span>
-                        </td>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-input"></span>
-                        </td>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-text"></span>
-                        </td>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-button"></span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-text"></span>
-                        </td>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-input"></span>
-                        </td>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-text"></span>
-                        </td>
-                        <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-600">
-                          <span className="skeleton skeleton-button"></span>
-                        </td>
-                      </tr>
+                      <TodoSceleton />
+                      <TodoSceleton />
+                      <TodoSceleton />
+                      <TodoSceleton />
+                      <TodoSceleton />
                     </>
                   ) : (
                     todos.map((todo) => (

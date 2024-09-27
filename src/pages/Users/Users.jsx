@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { getUsers } from "../services/Users";
-import { UserCard } from "../components/UserCard/UserCard";
-import { UserCardSceleton } from "../components/Sceletons/UserCard/UserCardSceleton";
+import { getUsers } from "../../services/Users";
+import { UserCard } from "../../components/UserCard/UserCard";
+import { UserCardSceleton } from "../../components/Sceletons/UserCard/UserCardSceleton";
 
-export const Team = () => {
+export const Users = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
